@@ -1,0 +1,100 @@
+<!Doctype html>
+<html>
+<head>
+<title> REGISTRATION FORM </title>
+<style>
+fieldset
+{
+background-color: #051019;
+opacity: 0.8;
+}
+input { focus {
+  background-color:pink;
+}
+  border: 2px solid red;
+  border-radius: 8px;
+width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  border: 2px solid red;
+  border-radius: 6px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+body
+{
+background-image:url(https://wallpapertag.com/wallpaper/full/d/0/6/344729-vertical-dark-forest-background-1920x1200.jpg);
+background-size:cover;
+text-align: center;
+}
+form{
+		align:center;
+		padding: 10px 200px 10px 400px;
+
+	}
+label
+{
+
+color:white;
+font-family: 'Archivo Black', sans-serif
+}
+h1
+{
+color:white;
+font-family: 'Lobster', cursive;
+}
+</style>
+</head>
+<body>
+<form action="#" name="myform" onsubmit="return validation()">
+<fieldset style="width: 500px" align="center">
+	<legend> <h1> Registration Form </h1> </legend>
+<label>NAME:</label>
+<input type="text" name="first_name" id="fname"><br><br>
+<label>EMAIL:</label>
+<input type="email" id="mail"> <br><br>
+<label>PASSWORD:</label>
+<input type="password" id="pwd" min="8"> <br><br>
+<label>MOBILE NUMBER:</label>
+<input type="number" id="nmbr"> <br><br>
+<input type="submit" value="Submit" name="submit">
+</fieldset>
+</form>
+<script>
+function validation(){
+var namee=document.forms["myform"]["fname"].value;
+if(namee==""||name==NULL){
+window.alert("Name cannot be empty");
+}
+var pass=document.forms["myform"]["pwd"].value;
+if(pass==""){
+window.alert("Password cannot be empty");
+}
+if(pass.length<6){
+window.alert("password should be of atleast 6 characters");
+}
+var number1=document.forms["myform"]["nmbr"].value;
+if(number1.length<10||number1.length>10){
+window.alert("Mobile number should be of 10 digits");
+}
+var email1=document.forms["myform"]["mail"].value;
+if(email1=="")  { 
+        window.alert("Please enter a valid e-mail address."); 
+       
+    } 
+
+}
+</script>
+</body>
+</html>
